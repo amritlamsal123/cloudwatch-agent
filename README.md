@@ -19,4 +19,5 @@
   * Let's schedulte the monitoring in 1 minute for our lab. You may want to do it in 5 mins or so. 
   * you may now use -- crontab -e and schedute */1 * * * * * /home/ec2-user/awscripts-mon/mon-put-instance-data.pl --mem-util --mem-util --mem-used-incl-cache-buff --mem-used --mem-avail and save it. 
   * crontab -l to see if it is set up correctly
+  * You may go to graphed metrics on aws console change the period to 1 minutes to see more detailed metrics.
   
