@@ -20,4 +20,5 @@
   * you may now use -- crontab -e and schedute */1 * * * * * /home/ec2-user/awscripts-mon/mon-put-instance-data.pl --mem-util --mem-util --mem-used-incl-cache-buff --mem-used --mem-avail and save it. 
   * crontab -l to see if it is set up correctly
   * You may go to graphed metrics on aws console change the period to 1 minutes to see more detailed metrics.
+#### The alternate way of setting up the metrics without roles and permissions is to provide the access key and secret access key to the awscreds.template.
   
