@@ -1,6 +1,6 @@
 # cloudwatch-agent
   * You can create a custom metrics for Memory usages using cutom metrices
-  * After you are connected to the instance, type below command:
+  * After you are connected to the instance, type below command: (install some perl dependencies)
   * sudo yum install perl-Switch perl-Switch perl-DateTime perl-Sys-Syslog perl-LWP-Protocol-https -y
 #### Download custom monitoring script provided by AWS
   * curl http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip -O
@@ -17,4 +17,6 @@
 #### Automating the metrices
   * We don't want to put the metrices every time manually. The whole point of metrices is to monitor our instances without having to go into them. 
   * Let's schedulte the monitoring in 1 minute for our lab. You may want to do it in 5 mins or so. 
+  * you may now use -- crontab -e and schedute */1 * * * * * /home/ec2-user/awscripts-mon/mon-put-instance-data.pl --mem-util --mem-util --mem-used-incl-cache-buff --mem-used --mem-avail and save it. 
+  * crontab -l to see if it is set up correctly
   
